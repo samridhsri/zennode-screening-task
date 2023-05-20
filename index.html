@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="App">
+        <div className='center'>
+            <h1 class="center">Zennode Screening Task For Developer Position</h1>
+            <div class="center">
+                <table id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows added using javascript -->
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="center">Do you want Gift Wrap?
+                <button style="margin: 0.5em" id="giftWrapYes" onclick="giftWrapYes()">Yes</button>
+                <button id="giftWrapNo" style="margin: 0.5em" onclick="giftWrapNo()">No</button>
+            </div>
+            <p id="cartSummary">You have 0 items in your cart. With no gift wrap, your total cost is $0. With discount, your total cost is $0. Your total savings is $0. You have Product_A: 0, Product_B: 0, Product_C: 0.</p>
+
+            <div style="font-weight: 500;">
+                <p>Total Quantity: <span class="amount" id="totalQuantity">0</span></p>
+                <br />
+                <p>Total Price: <span class="amount" id="totalPrice">0</span></p>
+                <br />
+                <p>Total Price With Gift Wrap: <span class="amount" id="totalPriceWithGiftWrap">0</span></p>
+                <br />
+                <p>Total Price With Gift Wrap and Shipping: <span class="amount" id="totalPriceWithShipping">0</span></p>
+                <br />
+                <p>Total Price with Discount: <span class="amount" id="totalPriceWithDiscount">0</span></p>
+                <br />
+                
+            </div>
+
+
+        </div>
+        <div className='fees'>
+            <h2 className='center'>Fees</h2>
+            <ul>
+                <li>Gift wrap fee: $1 per unit.</li>
+                <li>Shipping fee: 10 units can be packed in one package, and the shipping fee for each package is $5.
+                </li>
+            </ul>
+        </div>
+        <div className='rules'>
+            <h2 className='center'>Rules for Discount</h2>
+            <ul>
+                <li>"flat_10_discount": If cart total exceeds $200, apply a flat $10 discount on the cart total.</li>
+                <li>"bulk_5_discount": If quantity of any single product exceeds 10 units, apply a 5% discount on that
+                    item's total price.</li>
+                <li>"bulk_10_discount": If total quantity exceeds 20 units, apply a 10% discount on the cart total.</li>
+                <li>"tiered_50_discount": If total quantity exceeds 30 units & any single product quantity greater than
+                    15, then apply a 50% discount on products which are above 15 quantity. The first 15 quantity have
+                    the original price and unit above 15 will get 50% discount.</li>
+            </ul>
+            <h4>Note: Only one rule can be applied per purchase. If multiple discounts are applicable, the program
+                calculates the discount amount for each rule and applies the most beneficial one for customer.</h4>
+        </div>
+
+    </div>
+
+
+    <div class="credit center">
+        By Samridh Srivastava
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
